@@ -1,0 +1,9 @@
+*.pyc
+*.*swp
+.ropeproject
+*cache*
+.coverage*
+htmlcov
+sewage
+.tags
+.pdbrc.py
