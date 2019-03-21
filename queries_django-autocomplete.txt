@@ -1,0 +1,343 @@
+    default
+    5.34 ms (6 queries )
+
+  	Query 	Timeline 	Time (ms) 	Action
+  	- 	
+SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2019-03-21T15:07:04.528846+00:00'::timestamptz AND "django_session"."session_key" = 'ku98yfv1ublrcwkqfqtguhw5a886241r')
+	
+28.57142857142857%
+	1.52 	
+	
+
+Connection: default
+
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/contrib/staticfiles/handlers.py in __call__(65)
+  return self.application(environ, start_response)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/contrib/admin/options.py in wrapper(604)
+  return self.admin_site.admin_view(view)(*args, **kwargs)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/views/decorators/cache.py in _wrapped_view_func(44)
+  response = view_func(request, *args, **kwargs)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/contrib/admin/sites.py in inner(212)
+  if not self.has_permission(request):
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/contrib/admin/sites.py in has_permission(186)
+  return request.user.is_active and request.user.is_staff
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/contrib/auth/middleware.py in <lambda>(24)
+  request.user = SimpleLazyObject(lambda: get_user(request))
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/contrib/auth/middleware.py in get_user(12)
+  request._cached_user = auth.get_user(request)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/contrib/auth/__init__.py in get_user(182)
+  user_id = _get_user_session_key(request)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/contrib/auth/__init__.py in _get_user_session_key(59)
+  return get_user_model()._meta.pk.to_python(request.session[SESSION_KEY])
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/contrib/sessions/backends/base.py in __getitem__(55)
+  return self._session[key]
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/contrib/sessions/backends/base.py in _get_session(195)
+  self._session_cache = self.load()
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/contrib/sessions/backends/db.py in load(43)
+  s = self._get_session_from_db()
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/contrib/sessions/backends/db.py in _get_session_from_db(34)
+  expire_date__gt=timezone.now()
+
+  	- 	
+SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1
+	
+16.765717860494213%
+	0.89 	
+	
+
+Connection: default
+
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/contrib/staticfiles/handlers.py in __call__(65)
+  return self.application(environ, start_response)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/contrib/admin/options.py in wrapper(604)
+  return self.admin_site.admin_view(view)(*args, **kwargs)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/views/decorators/cache.py in _wrapped_view_func(44)
+  response = view_func(request, *args, **kwargs)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/contrib/admin/sites.py in inner(212)
+  if not self.has_permission(request):
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/contrib/admin/sites.py in has_permission(186)
+  return request.user.is_active and request.user.is_staff
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/contrib/auth/middleware.py in <lambda>(24)
+  request.user = SimpleLazyObject(lambda: get_user(request))
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/contrib/auth/middleware.py in get_user(12)
+  request._cached_user = auth.get_user(request)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/contrib/auth/__init__.py in get_user(189)
+  user = backend.get_user(user_id)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/contrib/auth/backends.py in get_user(98)
+  user = UserModel._default_manager.get(pk=user_id)
+
+  	- 	
+SELECT "inl_child3"."id", "inl_child3"."key_id", "inl_child3"."boolean" FROM "inl_child3" WHERE "inl_child3"."id" = 1
+	
+13.745028821663166%
+	0.73 	
+	
+
+Connection: default
+
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/contrib/staticfiles/handlers.py in __call__(65)
+  return self.application(environ, start_response)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/contrib/admin/options.py in wrapper(604)
+  return self.admin_site.admin_view(view)(*args, **kwargs)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/views/decorators/cache.py in _wrapped_view_func(44)
+  response = view_func(request, *args, **kwargs)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/contrib/admin/sites.py in inner(223)
+  return view(request, *args, **kwargs)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/contrib/admin/options.py in change_view(1640)
+  return self.changeform_view(request, object_id, form_url, extra_context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/contrib/admin/options.py in changeform_view(1525)
+  return self._changeform_view(request, object_id, form_url, extra_context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/contrib/admin/options.py in _changeform_view(1546)
+  obj = self.get_object(request, unquote(object_id), to_field)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/contrib/admin/options.py in get_object(756)
+  return queryset.get(**{field.name: object_id})
+
+  	- 	
+SELECT "inl_child2"."id", "inl_child2"."key_id", "inl_child2"."boolean", "inl_child2"."child_key_id" FROM "inl_child2" INNER JOIN "inl_child3_child_keys" ON ("inl_child2"."id" = "inl_child3_child_keys"."child2_id") WHERE "inl_child3_child_keys"."child3_id" = 1
+	
+21.42633719111667%
+	1.14 	
+	
+
+Connection: default
+
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/contrib/staticfiles/handlers.py in __call__(65)
+  return self.application(environ, start_response)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/contrib/admin/options.py in wrapper(604)
+  return self.admin_site.admin_view(view)(*args, **kwargs)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/views/decorators/cache.py in _wrapped_view_func(44)
+  response = view_func(request, *args, **kwargs)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/contrib/admin/sites.py in inner(223)
+  return view(request, *args, **kwargs)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/contrib/admin/options.py in change_view(1640)
+  return self.changeform_view(request, object_id, form_url, extra_context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/contrib/admin/options.py in changeform_view(1525)
+  return self._changeform_view(request, object_id, form_url, extra_context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/contrib/admin/options.py in _changeform_view(1581)
+  form = ModelForm(instance=obj)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/forms/models.py in __init__(292)
+  object_data = model_to_dict(instance, opts.fields, opts.exclude)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/forms/models.py in model_to_dict(91)
+  data[f.name] = f.value_from_object(instance)
+
+  	- 	
+SELECT "inl_master"."id" FROM "inl_master" WHERE "inl_master"."id" IN (1)
+	
+9.77255462710577%
+	0.52 	
+	
+
+Connection: default
+
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/contrib/staticfiles/handlers.py in __call__(65)
+  return self.application(environ, start_response)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/response.py in render(106)
+  self.content = self.rendered_content
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/response.py in rendered_content(83)
+  content = template.render(context, self._request)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/backends/django.py in render(61)
+  return self.template.render(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/base.py in render(171)
+  return self._render(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/test/utils.py in instrumented_test_render(96)
+  return self.nodelist.render(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/base.py in render(937)
+  bit = node.render_annotated(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/base.py in render_annotated(904)
+  return self.render(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/loader_tags.py in render(150)
+  return compiled_parent._render(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/test/utils.py in instrumented_test_render(96)
+  return self.nodelist.render(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/base.py in render(937)
+  bit = node.render_annotated(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/base.py in render_annotated(904)
+  return self.render(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/loader_tags.py in render(150)
+  return compiled_parent._render(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/test/utils.py in instrumented_test_render(96)
+  return self.nodelist.render(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/base.py in render(937)
+  bit = node.render_annotated(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/base.py in render_annotated(904)
+  return self.render(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/loader_tags.py in render(62)
+  result = block.nodelist.render(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/base.py in render(937)
+  bit = node.render_annotated(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/base.py in render_annotated(904)
+  return self.render(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/loader_tags.py in render(62)
+  result = block.nodelist.render(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/base.py in render(937)
+  bit = node.render_annotated(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/base.py in render_annotated(904)
+  return self.render(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/defaulttags.py in render(209)
+  nodelist.append(node.render_annotated(context))
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/base.py in render_annotated(904)
+  return self.render(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/loader_tags.py in render(188)
+  return template.render(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/base.py in render(173)
+  return self._render(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/test/utils.py in instrumented_test_render(96)
+  return self.nodelist.render(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/base.py in render(937)
+  bit = node.render_annotated(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/base.py in render_annotated(904)
+  return self.render(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/defaulttags.py in render(209)
+  nodelist.append(node.render_annotated(context))
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/base.py in render_annotated(904)
+  return self.render(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/defaulttags.py in render(209)
+  nodelist.append(node.render_annotated(context))
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/base.py in render_annotated(904)
+  return self.render(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/defaulttags.py in render(309)
+  return nodelist.render(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/base.py in render(937)
+  bit = node.render_annotated(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/base.py in render_annotated(904)
+  return self.render(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/defaulttags.py in render(309)
+  return nodelist.render(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/base.py in render(937)
+  bit = node.render_annotated(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/base.py in render_annotated(904)
+  return self.render(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/base.py in render(993)
+  return render_value_in_context(output, context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/base.py in render_value_in_context(972)
+  value = str(value)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/utils/html.py in <lambda>(397)
+  klass.__str__ = lambda self: mark_safe(klass_str(self))
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/forms/boundfield.py in __str__(33)
+  return self.as_widget()
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/forms/boundfield.py in as_widget(93)
+  renderer=self.form.renderer,
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/forms/widgets.py in render(229)
+  context = self.get_context(name, value, attrs)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/contrib/admin/widgets.py in get_context(293)
+  'rendered_widget': self.widget.render(name, value, attrs),
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/forms/widgets.py in render(229)
+  context = self.get_context(name, value, attrs)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/forms/widgets.py in get_context(668)
+  context = super().get_context(name, value, attrs)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/forms/widgets.py in get_context(629)
+  context['widget']['optgroups'] = self.optgroups(name, context['widget']['value'], attrs)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/contrib/admin/widgets.py in optgroups(427)
+  for obj in self.choices.queryset.using(self.db).filter(pk__in=selected_choices)
+
+  	- 	
+SELECT "inl_child2"."id", "inl_child2"."key_id", "inl_child2"."boolean", "inl_child2"."child_key_id" FROM "inl_child2" WHERE "inl_child2"."id" IN (2, 5, 3, 1, 4)
+	
+9.718932928191608%
+	0.52 	
+	
+
+Connection: default
+
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/contrib/staticfiles/handlers.py in __call__(65)
+  return self.application(environ, start_response)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/response.py in render(106)
+  self.content = self.rendered_content
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/response.py in rendered_content(83)
+  content = template.render(context, self._request)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/backends/django.py in render(61)
+  return self.template.render(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/base.py in render(171)
+  return self._render(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/test/utils.py in instrumented_test_render(96)
+  return self.nodelist.render(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/base.py in render(937)
+  bit = node.render_annotated(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/base.py in render_annotated(904)
+  return self.render(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/loader_tags.py in render(150)
+  return compiled_parent._render(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/test/utils.py in instrumented_test_render(96)
+  return self.nodelist.render(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/base.py in render(937)
+  bit = node.render_annotated(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/base.py in render_annotated(904)
+  return self.render(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/loader_tags.py in render(150)
+  return compiled_parent._render(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/test/utils.py in instrumented_test_render(96)
+  return self.nodelist.render(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/base.py in render(937)
+  bit = node.render_annotated(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/base.py in render_annotated(904)
+  return self.render(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/loader_tags.py in render(62)
+  result = block.nodelist.render(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/base.py in render(937)
+  bit = node.render_annotated(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/base.py in render_annotated(904)
+  return self.render(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/loader_tags.py in render(62)
+  result = block.nodelist.render(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/base.py in render(937)
+  bit = node.render_annotated(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/base.py in render_annotated(904)
+  return self.render(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/defaulttags.py in render(209)
+  nodelist.append(node.render_annotated(context))
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/base.py in render_annotated(904)
+  return self.render(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/loader_tags.py in render(188)
+  return template.render(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/base.py in render(173)
+  return self._render(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/test/utils.py in instrumented_test_render(96)
+  return self.nodelist.render(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/base.py in render(937)
+  bit = node.render_annotated(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/base.py in render_annotated(904)
+  return self.render(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/defaulttags.py in render(209)
+  nodelist.append(node.render_annotated(context))
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/base.py in render_annotated(904)
+  return self.render(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/defaulttags.py in render(209)
+  nodelist.append(node.render_annotated(context))
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/base.py in render_annotated(904)
+  return self.render(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/defaulttags.py in render(309)
+  return nodelist.render(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/base.py in render(937)
+  bit = node.render_annotated(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/base.py in render_annotated(904)
+  return self.render(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/defaulttags.py in render(309)
+  return nodelist.render(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/base.py in render(937)
+  bit = node.render_annotated(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/base.py in render_annotated(904)
+  return self.render(context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/base.py in render(993)
+  return render_value_in_context(output, context)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/template/base.py in render_value_in_context(972)
+  value = str(value)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/utils/html.py in <lambda>(397)
+  klass.__str__ = lambda self: mark_safe(klass_str(self))
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/forms/boundfield.py in __str__(33)
+  return self.as_widget()
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/forms/boundfield.py in as_widget(93)
+  renderer=self.form.renderer,
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/forms/widgets.py in render(229)
+  context = self.get_context(name, value, attrs)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/contrib/admin/widgets.py in get_context(293)
+  'rendered_widget': self.widget.render(name, value, attrs),
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/forms/widgets.py in render(229)
+  context = self.get_context(name, value, attrs)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/forms/widgets.py in get_context(668)
+  context = super().get_context(name, value, attrs)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/forms/widgets.py in get_context(629)
+  context['widget']['optgroups'] = self.optgroups(name, context['widget']['value'], attrs)
+/home/george/.virtualenvs/autobugd/lib/python3.7/site-packages/django/contrib/admin/widgets.py in optgroups(427)
+  for obj in self.choices.queryset.using(self.db).filter(pk__in=selected_choices)
+
+

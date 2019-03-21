@@ -1,4 +1,4 @@
-pip
-setuptools
 Django
 django-autocomplete-light
+django-debug-toolbar
+psycopg2-binary

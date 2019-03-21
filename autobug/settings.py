@@ -26,7 +26,7 @@ SECRET_KEY = '2g#%&qv0p1nmu7*2ql=m9du0%1fya8(@52m7y+c81j(b8wgu3e'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+INTERNAL_IPS = '127.0.0.1'
 
 # Application definition
 
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'debug_toolbar',
     'inl',
 ]
 
@@ -50,6 +51,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'autobug.urls'
@@ -78,11 +80,12 @@ WSGI_APPLICATION = 'autobug.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': 'test_autobug',
+        'USER': 'george',
+        'PASSWORD': 'ahead',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.1/ref/settings/#auth-password-validators

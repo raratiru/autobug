@@ -1,0 +1,6 @@
+SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2019-03-21T15:07:04.528846+00:00'::timestamptz AND "django_session"."session_key" = 'ku98yfv1ublrcwkqfqtguhw5a886241r')
+SELECT "auth_user"."id", "auth_user"."password", "auth_user"."last_login", "auth_user"."is_superuser", "auth_user"."username", "auth_user"."first_name", "auth_user"."last_name", "auth_user"."email", "auth_user"."is_staff", "auth_user"."is_active", "auth_user"."date_joined" FROM "auth_user" WHERE "auth_user"."id" = 1
+SELECT "inl_child3"."id", "inl_child3"."key_id", "inl_child3"."boolean" FROM "inl_child3" WHERE "inl_child3"."id" = 1
+SELECT "inl_child2"."id", "inl_child2"."key_id", "inl_child2"."boolean", "inl_child2"."child_key_id" FROM "inl_child2" INNER JOIN "inl_child3_child_keys" ON ("inl_child2"."id" = "inl_child3_child_keys"."child2_id") WHERE "inl_child3_child_keys"."child3_id" = 1
+SELECT "inl_master"."id" FROM "inl_master" WHERE "inl_master"."id" IN (1)
+SELECT "inl_child2"."id", "inl_child2"."key_id", "inl_child2"."boolean", "inl_child2"."child_key_id" FROM "inl_child2" WHERE "inl_child2"."id" IN (2, 5, 3, 1, 4)
